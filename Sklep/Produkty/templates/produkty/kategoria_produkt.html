@@ -3,10 +3,13 @@
 {% block produkt %}
 
     {% if kategoria_produkt %}
-
-        {% for produkt in kategoria_produkt %}
-            <p><a href="/produkt/{{ produkt.id }}">{{ produkt.nazwa }}</a></p>
-        {% endfor %}
+        <div class="main__title">{{ kategoria_user|upper }}</div>
+        <hr>
+        <div class="main__product--content">
+            {% for produkt in kategoria_produkt %}
+                <p><a href="/produkt/{{ produkt.id }}">{{ produkt.nazwa }}</a></p>
+            {% endfor %}
+        </div>
 
     {% else %}
 
