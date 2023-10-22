@@ -1,26 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sklep</title>
-</head>
-<body>
-    <div>
-        <h1> WITAJ W NASZYM SKLEPIE </h1>
-    </div>
-    </div style='clear:both'></div>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Sklep</title>
 
-    <div style="width:200px; float:left">
-        <h3> MENU </h3>
-        {% for kat in kategorie %}
-            <p><a href="/kategoria/{{ kat.id }}">{{ kat.nazwa }}</a></p>
-        {% endfor %}
-    </div>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+        <script src="https://kit.fontawesome.com/d55684f920.js" crossorigin="anonymous"></script>
+    </head>
 
-    <div style="width:700; float:left">
-        {% block produkt %}{% endblock produkt %}
-    </div>
-    </div style='clear:both'></div>
-</body>
+    <body>
+        <!-- Navbar Section -->
+        <div class="navbar">
+            {% include 'Produkty/navbar.html' %}
+        </div>
+
+        <!-- Main Section -->
+        <div class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <div class="main__category">
+                        <div class="main__title">KATEGORIE</div>
+                        <hr>
+                        <div class="main__category--content">
+                            {% for kat in kategorie %}
+                            <div class="main__category--item">
+                                <p><a href="/kategoria/{{ kat.id }}">{{ kat.nazwa }}</a></p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="main__product">
+                        {% block produkt %}{% endblock produkt %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
 </html>

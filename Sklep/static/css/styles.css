@@ -1,0 +1,153 @@
+:root {
+    --background-color: #444456;
+    --second-background-color: #bd9853;
+    --main-color: #d8b131;
+
+    --first-text-color: #fff;
+    --second-text-colod: #000;
+
+    --links-hover-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+}
+
+/* Navbar Css */
+
+.navbar__container {
+    background: var(--main-color);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar__content {
+    height: 100%;
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 50px;
+    z-index: 1;
+}
+
+.navbar__logo {
+    color: var(--first-text-color);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 100%;
+}
+
+.navbar__links {
+    height: 100%;
+    color: var(--first-text-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.navbar__links:hover {
+    transition: all 0.2s ease-in-out;
+    color: var(--links-hover-color);
+}
+
+/* Icon Css */
+
+.fa-solid {
+    margin-right: 0.5rem;
+}
+
+/* Main Css */
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__container {
+    height: 700px;
+    width: 1300px;
+    display: flex;
+    font-size: 1.2rem;
+    background: red;
+}
+
+.main__content {
+    display: flex;
+}
+
+.main__category {
+    background: var(--second-background-color);
+    height: 100%;
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__title {
+    color: var(--second-text-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+hr {
+    height: 1px;
+    width: 80%;
+    background: var(--second-text-colod);
+    border: 0px;
+    margin: 0 auto;
+
+}
+
+.main__category--content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.main__category--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.main__category--item a{
+    color: var(--first-text-color);
+    text-decoration: none;
+
+}
