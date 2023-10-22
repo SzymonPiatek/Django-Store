@@ -33,6 +33,7 @@ class Produkt(models.Model):
     # Odpowiednik pola Text Area w HTML
     opis = models.TextField(blank=True)
     cena = models.DecimalField(max_digits=12, decimal_places=2)
+    zdjecie = models.ImageField(upload_to='media/produkty/', default=None, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Produkt'

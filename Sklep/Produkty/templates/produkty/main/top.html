@@ -12,6 +12,41 @@
             </div>
         </div>
 
-        <div class="top__product"></div>
+        <div class="top__product">
+            <div class="top__product--container">
+                <div class="top__navbar--container">
+                    <div class="top__navbar--content">
+                        <div class="top__navbar--item">
+                            <a href="/"><div class="title">PROMOCJE</div></a>
+                        </div>
+                        <div class="top__navbar--item">
+                            <a href="/"><div class="title">OSTATNIE SZTUKI</div></a>
+                        </div>
+                        <div class="top__navbar--item">
+                            <a href="/"><div class="title">NOWOŚĆ</div></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="top__random--container">
+                    <div class="top__random--content">
+                        <div class="title">{{ losowy.nazwa }}</div>
+                        <div class="image">
+                            <img src="{{ losowy.zdjecie.url }}">
+                        </div>
+                        <div class="info">
+                            <div class="info--item">
+                                <div class="price">{{ losowy.cena }} PLN</div>
+                            </div>
+                            <div class="info--item">
+                                <div class="check">
+                                    <a href="/produkt/{{ losowy.id }}"><div class="button">Zobacz produkt</div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

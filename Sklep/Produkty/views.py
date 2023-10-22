@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Produkt, Producent, Kategoria
+import random
 
 def index(request):
     kategorie = Kategoria.objects.all()
+    wszystkie = Produkt.objects.all()
+    losowy = random.choice(wszystkie)
 
-    context = {'kategorie' : kategorie}
+    context = {'kategorie' : kategorie,
+               'losowy' : losowy}
     return render(request, 'Produkty/home.html', context)
 
 def kategoria(request, id):
