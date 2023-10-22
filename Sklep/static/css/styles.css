@@ -86,14 +86,14 @@ body {
     margin-right: 0.5rem;
 }
 
-/* Main Css */
+/* Top Css */
 
-.main {
+.top {
     display: flex;
     justify-content: center;
 }
 
-.main__container {
+.top__container {
     height: 600px;
     width: 1300px;
     display: flex;
@@ -101,13 +101,13 @@ body {
     background: red;
 }
 
-.main__content {
+.top__content {
     display: flex;
     height: 100%;
     width: 100%;
 }
 
-.main__category {
+.top__category {
     background: var(--second-background-color);
     height: 100%;
     width: 30%;
@@ -115,7 +115,7 @@ body {
     flex-direction: column;
 }
 
-.main__title {
+.top__title {
     color: var(--second-text-color);
     font-size: 1.2rem;
     font-weight: 700;
@@ -125,23 +125,22 @@ body {
     padding: 20px;
 }
 
-hr {
+.top__category hr {
     height: 1px;
     width: 80%;
     background: var(--second-text-colod);
     border: 0px;
     margin: 0 auto;
-
 }
 
-.main__category--content {
+.top__category--content {
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
 
-.main__category--item {
+.top__category--item {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -149,22 +148,51 @@ hr {
     align-items: center;
 }
 
-.main__category--item:first-child {
+.top__category--item:first-child {
     margin-top: 10px;
 }
 
-.main__category--item a{
+.top__category--item a{
     color: var(--first-text-color);
     text-decoration: none;
 }
 
-.main__category--item a:hover {
+.top__category--item a:hover {
     color: var(--links-hover-color);
 }
 
-.main__product {
+.top__product {
     height: 100%;
     width: 70%;
     display: flex;
     flex-direction: column;
+}
+
+/* Main Css */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__title {
+    color: var(--first-text-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main__container {
+    height: 600px;
+    width: 1300px;
+}
+
+.main__content hr {
+    height: 1px;
+    width: 100%;
+    background: var(--second-text-colod);
+    border: 0px;
+    margin: 0 auto;
 }

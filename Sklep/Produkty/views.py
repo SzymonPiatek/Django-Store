@@ -6,7 +6,7 @@ def index(request):
     kategorie = Kategoria.objects.all()
 
     context = {'kategorie' : kategorie}
-    return render(request, 'Produkty/index.html', context)
+    return render(request, 'Produkty/home.html', context)
 
 def kategoria(request, id):
     kategoria_user = Kategoria.objects.get(pk=id)

@@ -1,0 +1,17 @@
+<div class="top__container">
+    <div class="top__content">
+        <div class="top__category">
+            <div class="top__title">KATEGORIE</div>
+            <hr>
+            <div class="top__category--content">
+                {% for kat in kategorie %}
+                <div class="top__category--item">
+                    <p><a href="/kategoria/{{ kat.id }}">{{ kat.nazwa }}</a></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="top__product"></div>
+    </div>
+</div>

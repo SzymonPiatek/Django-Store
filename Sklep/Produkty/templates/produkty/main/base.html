@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Sklep</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+        <script src="https://kit.fontawesome.com/d55684f920.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- Navbar Section -->
+        <div class="navbar">
+            {% include 'Produkty/main/navbar.html' %}
+        </div>
+
+        <div class="top">
+            {% block top %}{% endblock top %}
+        </div>
+
+        <div class="main">
+            {% block main %}{% endblock main %}
+        </div>
+    </body>
+</html>

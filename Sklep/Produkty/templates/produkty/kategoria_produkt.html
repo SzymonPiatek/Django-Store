@@ -1,18 +1,21 @@
-{% extends 'Produkty/index.html' %}
+{% extends 'Produkty/main/base.html' %}
 
-{% block produkt %}
+{% block main %}
+    <div class="main__container">
+        <div class="main__content">
+            {% if kategoria_produkt %}
+                <div class="main__title">{{ kategoria_user|upper }}</div>
+                <hr>
+                <div class="main__product--content">
+                    {% for produkt in kategoria_produkt %}
+                        <p><a href="/produkt/{{ produkt.id }}">{{ produkt.nazwa }}</a></p>
+                    {% endfor %}
+                </div>
 
-    {% if kategoria_produkt %}
-        <div class="main__title">{{ kategoria_user|upper }}</div>
-        <hr>
-        <div class="main__product--content">
-            {% for produkt in kategoria_produkt %}
-                <p><a href="/produkt/{{ produkt.id }}">{{ produkt.nazwa }}</a></p>
-            {% endfor %}
+            {% else %}
+
+            {% endif %}
         </div>
+    </div>
 
-    {% else %}
-
-    {% endif %}
-
-{% endblock produkt%}
+{% endblock main%}

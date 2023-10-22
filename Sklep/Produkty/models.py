@@ -11,7 +11,6 @@ class Producent(models.Model):
         verbose_name = 'Producent'
         verbose_name_plural = 'Producenci'
 
-
 class Kategoria(models.Model):
     def __str__(self):
         return self.nazwa
@@ -21,7 +20,7 @@ class Kategoria(models.Model):
     class Meta:
         verbose_name = 'Kategoria'
         verbose_name_plural = 'Kategorie'
-
+        
 class Produkt(models.Model):
     def __str__(self):
         return self.nazwa

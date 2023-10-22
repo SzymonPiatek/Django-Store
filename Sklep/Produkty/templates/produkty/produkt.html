@@ -1,6 +1,6 @@
-{% extends 'Produkty/index.html' %}
+{% extends 'Produkty/main/base.html' %}
 
-{% block produkt %}
+{% block main %}
     {% if produkt_user %}
 
         <h1>{{ produkt_user.nazwa }}</h1>
@@ -13,4 +13,4 @@
         <p>Nie ma produktu o takim id</p>
 
     {% endif %}
-{% endblock produkt %}
+{% endblock main %}
